@@ -1,0 +1,36 @@
+To understande account verification process - https://stackoverflow.com/questions/39092822/how-to-confirm-email-address-using-express-node#:~:text=var%20UserSchema%20%3D%20new%20mongoose.,User'%2C%20UserSchema)%3B%20app.
+
+Things to remember while using nodemailer for sending email-
+https://stackoverflow.com/questions/45478293/username-and-password-not-accepted-when-using-nodemailer
+
+Error: connect ECONNREFUSED 127.0.0.1:465 nodemailer-
+https://stackoverflow.com/questions/38024428/error-connect-econnrefused-127-0-0-1465-nodemailer
+
+
+ Error: Why is __dirname not defined in node REPL?
+ReferenceError: __dirname is not defined --
+https://stackoverflow.com/questions/8817423/why-is-dirname-not-defined-in-node-repl
+(answer:-
+	If you are using Node.js modules, __dirname and __filename don't exist.
+
+From the Node.js documentation:
+
+No require, exports, module.exports, __filename, __dirname
+
+These CommonJS variables are not available in ES modules.
+
+require can be imported into an ES module using module.createRequire().
+
+Equivalents of __filename and __dirname can be created inside of each file via import.meta.url:
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+https://nodejs.org/docs/latest-v15.x/api/esm.html#esm_no_filename_or_dirname
+
+
+)
